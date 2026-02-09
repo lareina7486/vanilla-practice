@@ -1,8 +1,7 @@
 import { useState } from 'react';
-// TODO: 완성 후 아래 주석을 해제하세요
 import { Button } from './components/Button';
-// import { Input } from './components/Input';
-// import { Modal } from './components/Modal';
+import { Input } from './components/Input';
+import { Modal } from './components/Modal';
 import { darkTheme, lightTheme } from '@/styles/theme.css.js';
 import * as styles from './app.css.js';
 
@@ -21,8 +20,6 @@ export default function App() {
             공용 컴포넌트와 토큰을 먼저 만들어두면 화면 작업 속도가
             빨라집니다.
           </p>
-          {/* TODO: Button 컴포넌트를 완성한 후 아래 주석을 해제하세요 */}
-          
           <Button
             variant="secondary"
             onClick={() => setIsDarkMode((prev) => !prev)}
@@ -30,23 +27,20 @@ export default function App() {
             {isDarkMode ? '라이트 모드' : '다크 모드'}
           </Button>
          
-          <button onClick={() => setIsDarkMode((prev) => !prev)}>
+          {/* <button onClick={() => setIsDarkMode((prev) => !prev)}>
             {isDarkMode ? '라이트 모드' : '다크 모드'}
-          </button>
+          </button> */}
         </header>
 
         <section className={styles.card}>
           <h2>Button Variants</h2>
-          <div className={styles.buttonRow}>
-            {/* TODO: Button 컴포넌트를 완성한 후 여기에 버튼들을 추가하세요 */}
-            {/* 
+          <div className={styles.buttonRow}>   
             <Button variant="primary">Primary</Button>
             <Button variant="secondary">Secondary</Button>
             <Button variant="ghost">Ghost</Button>
             <Button size="sm">Small</Button>
             <Button size="lg">Large</Button>
             <Button disabled>Disabled</Button>
-            */}
             <p style={{ color: '#6b7280' }}>Button 컴포넌트를 완성해주세요!</p>
           </div>
         </section>
@@ -54,11 +48,8 @@ export default function App() {
         <section className={styles.card}>
           <h2>Input</h2>
           <div className={styles.formRow}>
-            {/* TODO: Input 컴포넌트를 완성한 후 여기에 인풋들을 추가하세요 */}
-            {/* 
             <Input placeholder="검색어를 입력하세요" />
             <Input placeholder="비활성화 상태" disabled />
-            */}
             <p style={{ color: '#6b7280' }}>Input 컴포넌트를 완성해주세요!</p>
           </div>
         </section>
@@ -67,8 +58,7 @@ export default function App() {
           <article className={styles.card}>
             <h3>Modal Preview</h3>
             <p>필요한 순간에만 모달을 열어 사용자 흐름을 방해하지 않습니다.</p>
-            {/* TODO: Modal 컴포넌트를 완성한 후 아래 주석을 해제하세요 */}
-            {/* <Button onClick={() => setIsModalOpen(true)}>모달 열기</Button> */}
+            <Button onClick={() => setIsModalOpen(true)}>모달 열기</Button>
             <button onClick={() => setIsModalOpen(true)}>모달 열기</button>
           </article>
           <article className={styles.card}>
@@ -84,15 +74,12 @@ export default function App() {
           </article>
         </section>
       </div>
-
-      {/* TODO: Modal 컴포넌트를 완성한 후 아래 주석을 해제하세요 */}
-      {/* 
       {isModalOpen ? (
         <Modal title="알림" onClose={() => setIsModalOpen(false)}>
           공용 모달은 메시지를 바꿔가며 재사용할 수 있습니다.
         </Modal>
       ) : null}
-      */}
+     
     </div>
   );
 }
